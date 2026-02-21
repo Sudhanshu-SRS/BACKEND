@@ -1,0 +1,123 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  background: #f4f6f8;
+}
+
+.post-creation-section { 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+}
+
+.post-creation-section h1 {
+  margin-bottom: 20px;
+  font-size: 28px;
+  color: #333;
+}
+
+.post-creation-section form {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 350px;
+}
+
+.post-creation-section input[type="file"],
+.post-creation-section input[type="text"] {
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  outline: none;
+  transition: 0.3s ease;
+}
+
+.post-creation-section input:focus {
+  border-color: #4a90e2;
+  box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.2);
+}
+
+.post-creation-section button {
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  background: #4a90e2;
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.post-creation-section button:hover {
+  background: #357bd8;
+  transform: translateY(-2px);
+}
+
+.post-creation-section button:active {
+  transform: scale(0.98);
+}
+
+/* Main Section */
+.post-collection {
+  min-height: 100vh;
+  padding: 40px;
+  background: #f4f6f8;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+/* Post Card */
+.post-card {
+  background: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+.post-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Image */
+.post-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+/* Caption */
+.post-card p {
+  padding: 15px;
+  font-size: 14px;
+  color: #333;
+  font-weight: 500;
+}
+
+/* Empty Message */
+.no-post {
+  grid-column: 1 / -1;
+  text-align: center;
+  font-size: 24px;
+  color: #777;
+}
